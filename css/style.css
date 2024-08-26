@@ -189,18 +189,18 @@ main {
 
 /* main__areas */
 
-.main__areas {
+.main__events {
   width: 100%;
   min-height: 100vh;
   background: linear-gradient(var(--tertiary-color), var(--primary-color));
 	padding: 10px;
 }
 
-.main__areas__h2 {
+.main__events__h2 {
 	font-size: 3rem
 }
 
-.main__areas__p {
+.main__events__p {
 	font-size: 1.5rem;
 }
 
