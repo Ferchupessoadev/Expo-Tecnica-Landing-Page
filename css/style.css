@@ -227,6 +227,7 @@ main {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	align-items: center;
 }
 
 .footer__nav {
@@ -234,6 +235,19 @@ main {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	gap: 1.5rem;
+}
+
+.footer__h3 {
+	font-size: 1.8rem;
+}
+
+.footer__ul {
+	list-style: none;
+}
+
+.footer__ul .footer__ul__li a {
+	text-decoration: none;
 }
 
 /* responsive */
