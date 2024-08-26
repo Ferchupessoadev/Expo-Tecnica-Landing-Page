@@ -59,7 +59,7 @@ header {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  color: var(--secondary-color);
+  color: var(--quaternary-color);
 }
 
 /* Nav */
@@ -239,15 +239,22 @@ main {
 }
 
 .footer__h3 {
-	font-size: 1.8rem;
+	font-size: 1.1rem;
 }
 
 .footer__ul {
 	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
 }
 
 .footer__ul .footer__ul__li a {
 	text-decoration: none;
+}
+
+.footer__ul .footer__ul__li:hover a {
+	border-bottom: 1px solid #fff;
 }
 
 /* responsive */
