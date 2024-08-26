@@ -105,7 +105,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-	padding: 0px 15px;
+  padding: 0px 15px;
 }
 
 .header__nav__item:hover {
@@ -133,7 +133,7 @@ main {
   align-items: center;
   gap: 2.5rem;
   width: 100%;
-	height: calc(100vh - 120px);
+  height: calc(100vh - 120px);
   padding-top: 50px;
   background: linear-gradient(
     var(--primary-color) 22%,
@@ -178,6 +178,14 @@ main {
 .main__little-left__dates p .info {
   font-size: 1.5rem;
   user-select: none;
+}
+
+/* main__areas */
+
+.main__areas {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(var(--tertiary-color), var(--primary-color));
 }
 
 /* responsive */
@@ -252,9 +260,9 @@ main {
     transform: rotate(-50deg);
   }
 
-	.main__little-left {
-		height: calc(100vh - 80px);
-	}
+  .main__little-left {
+    height: calc(100vh - 80px);
+  }
 
   .main__little-left__dates {
     gap: 0.3rem;
