@@ -2,7 +2,7 @@ const $ = selector => document.querySelector(selector);
 const $$ = selector => document.querySelectorAll(selector);
 
 const updateDateAndTime = () => {
-	const date_event = new Date('2024-09-04');
+	const date_event = new Date('2024-09-05');
 	const date = new Date();
 	const days = $('#days').firstElementChild;
 	const hours = $('#hours').firstElementChild;
