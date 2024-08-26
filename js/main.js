@@ -26,3 +26,8 @@ setInterval(updateDateAndTime, 1000);
 
 updateDateAndTime();
 
+// nav responsive
+$('.header__menu-btn').addEventListener("click", () => {
+	$('.header__nav-responsive').classList.toggle('show__nav__responsive')
+	$('.header__menu-btn').classList.toggle('header__menu-btn-show')
+})
