@@ -191,11 +191,14 @@ main {
   min-height: 100vh;
   background: var(--primary-color);
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .main__events__h2 {
   font-size: 3rem;
-  padding: 0 3%;
+  color: var(--secondary-color);
 }
 
 .main__events__p {
@@ -206,6 +209,29 @@ main {
 .main__container__cards {
   display: flex;
   flex-direction: column;
+  gap: 10px;
+  width: 70%;
+}
+
+.main__container__cards__card {
+  display: flex;
+  border: 2px solid #000;
+  gap: 10px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.main__container__cards__card__img__container {
+  display: flex;
+  width: 40%;
+  height: 120px;
+}
+
+.main__container__cards__card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 footer {
