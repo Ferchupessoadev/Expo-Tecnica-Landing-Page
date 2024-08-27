@@ -239,6 +239,11 @@ main {
   width: 100%;
 }
 
+.main__horarios__h3 {
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+}
+
 .main__stand {
   width: 80%;
   background: var(--primary-color);
