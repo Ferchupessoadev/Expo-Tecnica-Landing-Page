@@ -28,6 +28,7 @@
 body {
   color-scheme: dark;
   background: var(--primary-color);
+  scroll-behavior: smooth;
   min-height: 100vh;
 }
 
