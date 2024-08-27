@@ -2,7 +2,7 @@ const $ = selector => document.querySelector(selector);
 const $$ = selector => document.querySelectorAll(selector);
 
 const formatTimeString = timeNumber => {
-  return timeNumber < 10 ? '0' + timeNumber : timeNumber
+	return timeNumber < 10 ? '0' + timeNumber : timeNumber
 }
 
 const updateDateAndTime = () => {
@@ -20,12 +20,12 @@ const updateDateAndTime = () => {
 	const minutes_diff = Math.floor(diff / 1000 / 60) % 60;
 	const seconds_diff = Math.floor(diff / 1000) % 60;
 
-  if (days_diff + hours_diff + minutes_diff + seconds_diff <= 0) {
-    hours.style.display = "none"
-    minutes.style.display = "none"
-    seconds.style.display = "none"
-    hours.parentElement.parentElement.innerHTML = "<span class=\"value\">¡La Expo ya ha comenzado!</span>"
-  }
+	if (days_diff + hours_diff + minutes_diff + seconds_diff <= 0) {
+		hours.style.display = "none"
+		minutes.style.display = "none"
+		seconds.style.display = "none"
+		hours.parentElement.parentElement.innerHTML = "<span class=\"value\">¡La Expo ya ha comenzado!</span>"
+	}
 
 	days.textContent = formatTimeString(days_diff)
 	hours.textContent = formatTimeString(hours_diff)
@@ -41,4 +41,11 @@ updateDateAndTime();
 $('.header__menu-btn').addEventListener("click", () => {
 	$('.header__nav-responsive').classList.toggle('show__nav__responsive')
 	$('.header__menu-btn').classList.toggle('header__menu-btn-show')
+})
+
+$$('.header__nav-responsive__li').forEach((li) => {
+	li.addEventListener("click", () => {
+		$('.header__nav-responsive').classList.remove('show__nav__responsive')
+		$('.header__menu-btn').classList.remove('header__menu-btn-show')
+	})
 })
