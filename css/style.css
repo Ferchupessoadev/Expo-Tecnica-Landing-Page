@@ -195,10 +195,12 @@ main {
 
 .main__events__h2 {
   font-size: 3rem;
+  padding: 0 3%;
 }
 
 .main__events__p {
   font-size: 1.5rem;
+  padding: 4px 3%;
 }
 
 .main__container__cards {
@@ -471,4 +473,25 @@ footer {
     transform: scale(1);
     opacity: 1;
   }
+}
+
+.main__container__form {
+  padding: 10%;
+  padding-top: 0;
+  font-family: "roboto";
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main__container__form label {
+  padding: 1%;
+  margin-top: 4%;
+}
+
+.main__container__form input {
+  width: 50%;
+  font-size: 1.5rem;
+  padding: 0.5%;
 }
