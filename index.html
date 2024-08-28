@@ -220,22 +220,35 @@
           mediante motores, folletos, juegos, rompecabezas y más.
         </p>
       </section>
-      <form class="main__container__form" id="contact">
-        <h3>
-          Si usted representa a otra institución educativa y quiere enviar a sus
-          alumnos a nuestro establecimiento para presenciar la Expo, envíe el
-          siguiente formulario:
-        </h3>
-        <label for="nombre-escuela"><b>Nombre de la escuela:</b></label>
-        <input type="text" name="nombre-escuela" required />
-        <label for="correo"><b>Correo de contacto:</b></label>
-        <input
-          type="text"
-          name="correo"
-          pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
-          required
-        />
-      </form>
+      <section class="main__contact" id="contact">
+        <form class="main__container__form">
+          <h3 class="main__container__form__h3">
+            Si representa a otra institución educativa y está interesado en
+            enviar a sus alumnos a nuestro establecimiento para visitar la Expo,
+            no dude en ponerse en contacto con nosotros.
+          </h3>
+          <input
+            class="main__container__form__input main__container__form__name"
+            type="text"
+            name="schoolname"
+            placeholder="Ej. Escuela Técnica N°2"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            class="main__container__form__email main__container__form__input"
+            pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+            placeholder="Ej. tecnica2concordia@gmail.com"
+            required
+          />
+          <input
+            class="main__container__form__submit"
+            type="submit"
+            value="Enviar"
+          />
+        </form>
+      </section>
     </main>
     <footer class="footer">
       <div class="footer__container">

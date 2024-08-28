@@ -269,66 +269,65 @@ footer {
   align-items: center;
   flex-direction: column;
   gap: 20px;
-}
 
-.footer__copyright {
-  color: #bbb;
-}
+  & .footer__copyright {
+    color: #bbb;
+  }
 
-/* Footer */
-.footer__container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
+  /* Footer */
+  & .footer__container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
 
-.footer__div__group {
-  display: flex;
-  align-items: center;
-  width: 50%;
-  height: 50%;
-}
+  & .footer__div__group {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+  }
 
-.footer__item__container {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+  & .footer__item__container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-.footer__nav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: start;
-  gap: 1.5rem;
-}
+  & .footer__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 1.5rem;
+  }
 
-.footer__h3 {
-  font-size: 1.1rem;
-  color: rgba(255 255 255 / 0.6);
-}
+  & .footer__h3 {
+    font-size: 1rem;
+    color: rgba(255 255 255 / 0.6);
+  }
 
-.footer__ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
+  & .footer__ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    & .footer__ul__li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 0.8rem;
+    }
 
-.footer__ul .footer__ul__li a {
-  text-decoration: none;
+    & .footer__ul__li:hover a {
+      border-bottom: 1px solid #fff;
+    }
+  }
 }
-
-.footer__ul .footer__ul__li:hover a {
-  border-bottom: 1px solid #fff;
-}
-
-/* responsive */
 
 @media screen and (max-width: 768px) {
   .header {
@@ -483,15 +482,15 @@ footer {
 
   .footer__div__group {
     width: 100%;
-    gap: 30px;
+    gap: 10px;
   }
 
   .footer__item__container {
-    gap: 50px;
+    gap: 1px;
   }
 
   .footer__nav {
-    gap: 5px;
+    gap: 1px;
   }
 }
 
@@ -526,24 +525,65 @@ footer {
     opacity: 1;
   }
 }
-
-.main__container__form {
-  padding: 10%;
-  padding-top: 0;
-  font-family: "roboto";
-  font-size: 1.5rem;
+/* contact */
+.main__contact {
+  width: 100%;
+  height: 100%;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-}
 
-.main__container__form label {
-  padding: 1%;
-  margin-top: 4%;
-}
+  & .main__container__form {
+    width: 100%;
+    padding: 10%;
+    font-family: "Roboto";
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background: var(--secondary-color);
 
-.main__container__form input {
-  width: 50%;
-  font-size: 1.5rem;
-  padding: 0.5%;
+    & h3 {
+      font-size: 1rem;
+    }
+
+    & .main__container__form__input {
+      width: 100%;
+      font-size: 1rem;
+      padding: 10px 15px;
+      border: none;
+      outline: none;
+      border-radius: 10px;
+      background: var(--quaternary-color);
+      color: var(--primary-color);
+    }
+
+    & .main__container__form__email:focus {
+      background: var(--quaternary-color);
+    }
+
+    & .main__container__form__input:active {
+      background: var(--quaternary-color);
+    }
+
+    & .main__container__form__input:-webkit-autofill {
+      background: var(--quaternary-color);
+      -webkit-box-shadow: 0 0 0 1000px transparent inset;
+      color: var(--primary-color);
+    }
+
+    & .main__container__form__submit {
+      width: max-content;
+      font-size: 1.5rem;
+      padding: 0.5%;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 4%;
+      background: var(--primary-color);
+      color: var(--quaternary-color);
+      cursor: pointer;
+    }
+  }
 }
