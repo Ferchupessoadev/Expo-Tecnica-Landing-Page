@@ -24,7 +24,7 @@ const updateDateAndTime = () => {
 		hours.style.display = "none"
 		minutes.style.display = "none"
 		seconds.style.display = "none"
-		hours.parentElement.parentElement.innerHTML = "<span class=\"value\">¡La Expo ya ha comenzado!</span>"
+		hours.parentElement.parentElement.parentElement.innerHTML = "<h2 class=\"main__little-left__title--deactive\">¡La Expo ya ha comenzado!</h2><b>¡No te lo pierdas!</b>"
 	}
 
 	days.textContent = formatTimeString(days_diff)

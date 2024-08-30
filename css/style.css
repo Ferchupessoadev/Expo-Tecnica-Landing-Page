@@ -11,6 +11,7 @@
 /* Variables */
 :root {
   --primary-color: #151515;
+  --secondary-color-dark: #85243b;
   --secondary-color: #a91d3a;
   --tertiary-color: #c73659;
   --quaternary-color: #eeeeee;
@@ -248,57 +249,106 @@ main {
   align-items: center;
   width: 100%;
   height: 100%;
-}
 
-.main__little-left {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 2.5rem;
-  width: 100%;
-  height: calc(100vh - 120px);
-  padding-top: 50px;
-  background: var(--primary-color);
-}
+  & .main__little-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    width: 100%;
+    height: calc(100vh - 120px);
+    padding-top: 50px;
+    background: linear-gradient(
+      var(--primary-color),
+      var(--secondary-color-dark)
+    );
 
-.main__little-left__title {
-  font-size: 4.5rem;
-  font-weight: 700;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
+    & .main__little-left__title {
+      font-size: 4.5rem;
+      font-weight: 700;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
 
-.main__little-left__title::after {
-  content: "";
-  width: 40%;
-  height: 4px;
-  background-color: var(--secondary-color);
-  color: var(--secondary-color);
-}
+    & .main__little-left__title::after {
+      content: "";
+      width: 40%;
+      height: 4px;
+      background-color: var(--secondary-color);
+      color: var(--secondary-color);
+    }
 
-.main__little-left__dates {
-  display: flex;
-  gap: 1rem;
-}
+    & .main__little-left__title--deactive {
+      font-size: 2.5rem;
+      font-weight: 700;
+      display: flex;
+      justify-content: center;
+    }
 
-.main__little-left__dates p {
-  font-size: 7rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: rgba(255 255 255 / 0.1);
-  padding: 8px 15px;
-  border-radius: 8px;
-  user-select: none;
-}
+    & .main__little-left__dates {
+      display: flex;
+      gap: 1rem;
 
-.main__little-left__dates p .info {
-  font-size: 1.5rem;
-  user-select: none;
+      & p {
+        font-size: 7rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: rgba(255 255 255 / 0.1);
+        padding: 8px 15px;
+        border-radius: 8px;
+        user-select: none;
+
+        & .info {
+          font-size: 1.5rem;
+          user-select: none;
+        }
+      }
+    }
+    @media screen and (max-width: 768px) {
+      & .main__little-left {
+        height: calc(100vh - 80px);
+      }
+
+      & .main__little-left__dates {
+        gap: 0.3rem;
+
+        & p {
+          font-size: 3rem;
+
+          & .info {
+            font-size: 1rem;
+          }
+        }
+      }
+
+      & .main__little-left__title {
+        font-size: 3.5rem;
+      }
+    }
+
+    @media screen and (max-width: 512px) {
+      .main__little-left__title {
+        font-size: 2.5rem;
+      }
+
+      .main__little-left__title--deactive {
+        font-size: 0.96rem;
+      }
+
+      .main__little-left__dates p {
+        font-size: 2rem;
+      }
+
+      .main__little-left__dates p .info {
+        font-size: 0.5rem;
+      }
+    }
+  }
 }
 
 /* main__areas */
@@ -446,26 +496,6 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-  .main__little-left {
-    height: calc(100vh - 80px);
-  }
-
-  .main__little-left__dates {
-    gap: 0.3rem;
-  }
-
-  .main__little-left__title {
-    font-size: 3.5rem;
-  }
-
-  .main__little-left__dates p {
-    font-size: 3rem;
-  }
-
-  .main__little-left__dates p .info {
-    font-size: 1rem;
-  }
-
   .footer {
     height: max-content;
   }
@@ -490,18 +520,6 @@ footer {
 }
 
 @media screen and (max-width: 480px) {
-  .main__little-left__title {
-    font-size: 2.5rem;
-  }
-
-  .main__little-left__dates p {
-    font-size: 2rem;
-  }
-
-  .main__little-left__dates p .info {
-    font-size: 0.5rem;
-  }
-
   .footer__div__group {
     flex-direction: column;
   }
