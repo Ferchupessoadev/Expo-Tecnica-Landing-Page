@@ -191,7 +191,7 @@ body {
   opacity: 0.3;
   transition: all 0.3s ease-in;
   position: absolute;
-  height: calc(100vh - 120px);
+  height: calc(100% - 80px);
   background: linear-gradient(var(--secondary-color), var(--tertiary-color));
   width: 100%;
   justify-content: space-between;
