@@ -35,7 +35,7 @@ body {
 /* Header */
 .header {
   color: var(--tertiary-color);
-  background: var(--primary-color);
+  background: var(--secondary-color);
   display: flex;
   justify-content: center;
   width: 100%;
