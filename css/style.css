@@ -35,7 +35,7 @@ body {
 /* Header */
 .header {
   color: var(--tertiary-color);
-  background: var(--secondary-color);
+  background: var(--primary-color);
   display: flex;
   justify-content: center;
   width: 100%;
@@ -192,7 +192,7 @@ body {
   transition: all 0.3s ease-in;
   position: absolute;
   height: calc(100vh - 100px);
-  background: linear-gradient(var(--primary-color), #000);
+  background: linear-gradient(var(--secondary-color), var(--tertiary-color));
   width: 100%;
   justify-content: space-between;
   flex-direction: column;
